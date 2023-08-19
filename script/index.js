@@ -11,7 +11,10 @@ function handleCLikBtn(target) {
     const itemPrice = target.childNodes[3].childNodes[5].childNodes[1].innerText;
     const totalPrice = document.getElementById('total-price')
     totalCost = parseInt(totalCost) + parseInt(itemPrice)
-    totalPrice.innerText = totalCost
+    totalPrice.innerText = totalCost.toFixed(2)
 
+    // Step-3
+    const purchaseButton = document.getElementById('purchase-btn')
+    console.log(purchaseButton);
 
 }
