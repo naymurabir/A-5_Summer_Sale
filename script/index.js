@@ -53,3 +53,12 @@ function handleCLikBtn(target) {
         return
     }
 }
+
+// Step-6
+function defaultHome() {
+    document.getElementById('cart-items').innerText = '';
+    document.getElementById('total-price').innerText = '00';
+    document.getElementById('discount-amount').innerText = '00';
+    document.getElementById('discount-total').innerText = '00';
+    document.getElementById('coupon-field').value = '';
+}
