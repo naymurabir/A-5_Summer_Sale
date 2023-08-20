@@ -25,10 +25,21 @@ function handleCLikBtn(target) {
     cartItems.appendChild(newCart)
 
     // Step-2
-    const itemPrice = target.childNodes[3].childNodes[5].childNodes[1].innerText;
-    const totalPrice = document.getElementById('total-price')
-    totalCost = parseInt(totalCost) + parseInt(itemPrice)
-    totalPrice.innerText = totalCost.toFixed(2)
+    const perItemPrice = target.childNodes[3].childNodes[5].childNodes[1].innerText;
+    const itemTotalPrice = document.getElementById('total-price')
+    totalCost = parseInt(totalCost) + parseInt(perItemPrice)
+    itemTotalPrice.innerText = totalCost.toFixed(2)
+
+    // Step-3
+    const discountAmount = document.getElementById('discount-amount')
+    const discountedTotalAmount = document.getElementById('discount-total')
+
+    if (totalCost > 200) {
+        const discount = (totalCost / 100) * 20
+        const discountUpdate = totalCost - discount
+        discountAmount.innerText = parseInt(discount)
+        discountedTotalAmount.innerText = discountUpdate
+    }
 
 }
 
