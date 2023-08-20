@@ -46,4 +46,3 @@ function handleCLikBtn(target) {
     itemTotalPrice.innerText = totalCost.toFixed(2)
 
 }
-
