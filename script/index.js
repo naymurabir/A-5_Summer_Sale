@@ -52,5 +52,4 @@ function handleCLikBtn(target) {
         purchaseButton.setAttribute('disabled', true)
         return
     }
-
 }
