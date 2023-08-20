@@ -1,3 +1,20 @@
+// Coupon Button
+document.getElementById('coupon-field').addEventListener('keyup', function (event) {
+    const applyButton = document.getElementById('apply-btn')
+    const couponCode = event.target.value
+    // console.log(event.target.value);
+    if (couponCode === "SELL200") {
+        applyButton.style.backgroundColor = '#E527B2'
+        return applyButton.removeAttribute('disabled')
+
+    } else {
+        applyButton.style.backgroundColor = '#F9A8D4'
+        return applyButton.setAttribute('disabled', true)
+    }
+
+})
+
+// Cart Section Calculation
 let totalCost = 0
 function handleCLikBtn(target) {
     // Step-1
@@ -13,8 +30,5 @@ function handleCLikBtn(target) {
     totalCost = parseInt(totalCost) + parseInt(itemPrice)
     totalPrice.innerText = totalCost.toFixed(2)
 
-    // Step-3
-    const purchaseButton = document.getElementById('purchase-btn')
-    console.log(purchaseButton);
-
 }
+

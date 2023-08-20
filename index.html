@@ -297,9 +297,10 @@
                 <div>
                     <div class="bg-white shadow-md h-[100px] px-4 py-5 mt-10 rounded mb-5">
                         <h1 class="font-semibold">Have coupon?</h1>
-                        <input class="border-2 rounded border-gray-200 w-7/12 px-1 py-1" type="text"
+                        <input id="coupon-field" class="border-2 rounded border-gray-200 w-7/12 px-1 py-1" type="text"
                             placeholder="Coupon code">
-                        <button class="bg-[#E527B2] text-white px-2 py-1.5 rounded">Apply</button>
+                        <button id="apply-btn" class="bg-[#F9A8D4] text-white px-2 py-1.5 rounded"
+                            disabled>Apply</button>
                     </div>
 
                     <div class="bg-white shadow-md px-4 py-5 rounded">
@@ -312,7 +313,7 @@
                         <h2 class="font-semibold mb-2">Discount: <span class="font-normal">0</span></h2>
                         <h2 class="font-semibold mb-2">Total: <span class="font-normal">0</span></h2>
                         <hr class="mb-4">
-                        <button class="bg-[#E527B2] text-white px-2 py-1 rounded w-full">Make
+                        <button class="bg-[#E527B2] text-white px-2 py-1 rounded w-full" disabled>Make
                             Purchase</button>
                     </div>
                 </div>
