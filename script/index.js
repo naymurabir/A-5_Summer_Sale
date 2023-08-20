@@ -1,17 +1,32 @@
-// Coupon Button
+// Coupon Field
 document.getElementById('coupon-field').addEventListener('keyup', function (event) {
     const applyButton = document.getElementById('apply-btn')
-    const couponCode = event.target.value
     // console.log(event.target.value);
+    const couponCode = event.target.value
+
     if (couponCode === "SELL200") {
         applyButton.style.backgroundColor = '#E527B2'
-        return applyButton.removeAttribute('disabled')
+        applyButton.removeAttribute('disabled')
 
     } else {
         applyButton.style.backgroundColor = '#F9A8D4'
-        return applyButton.setAttribute('disabled', true)
+        applyButton.setAttribute('disabled', true)
     }
 
+})
+
+// Apply Button Action
+document.getElementById('apply-btn').addEventListener('click', function () {
+    // Step - 3
+    const discountAmount = document.getElementById('discount-amount')
+    const discountedTotalAmount = document.getElementById('discount-total')
+
+    if (totalCost > 200) {
+        const discount = (totalCost / 100) * 20
+        const discountUpdate = totalCost - discount
+        discountAmount.innerText = parseInt(discount).toFixed(2)
+        discountedTotalAmount.innerText = discountUpdate.toFixed(2)
+    }
 })
 
 // Cart Section Calculation
@@ -29,17 +44,6 @@ function handleCLikBtn(target) {
     const itemTotalPrice = document.getElementById('total-price')
     totalCost = parseInt(totalCost) + parseInt(perItemPrice)
     itemTotalPrice.innerText = totalCost.toFixed(2)
-
-    // Step-3
-    const discountAmount = document.getElementById('discount-amount')
-    const discountedTotalAmount = document.getElementById('discount-total')
-
-    if (totalCost > 200) {
-        const discount = (totalCost / 100) * 20
-        const discountUpdate = totalCost - discount
-        discountAmount.innerText = parseInt(discount)
-        discountedTotalAmount.innerText = discountUpdate
-    }
 
 }
 
