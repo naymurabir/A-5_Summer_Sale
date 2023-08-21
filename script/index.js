@@ -55,6 +55,7 @@ function handleCLikBtn(target) {
 }
 
 // Step-6
+// Default Cart & Payment:
 function defaultHome() {
     document.getElementById('cart-items').innerText = '';
     document.getElementById('total-price').innerText = '00';
